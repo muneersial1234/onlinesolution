@@ -1,0 +1,296 @@
+final
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .initial-buttons, .main-buttons, .gallery {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .initial-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 350px;
+            height: 500px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(145deg, #d9d9d9, #ffffff);
+            box-shadow: 5px 5px 10px #b8b8b8, -5px -5px 10px #ffffff;
+            transition: all 0.3s ease;
+        }
+        button:active {
+            box-shadow: inset 5px 5px 10px #b8b8b8, inset -5px -5px 10px #ffffff;
+        }
+    </style>
+    <script>
+        function showMainButtons() {
+            document.querySelector('.initial-buttons').style.display = 'none';
+            document.querySelector('.main-buttons').style.display = 'flex';
+        }
+
+        function showGallery(index) {
+            document.querySelector('.main-buttons').style.display = 'none';
+            document.getElementById('gallery-' + index).style.display = 'flex';
+        }
+
+        function goBackToInitial() {
+            document.querySelector('.main-buttons').style.display = 'none';
+            document.querySelectorAll('.gallery').forEach(gallery => {
+                gallery.style.display = 'none';
+            });
+            document.querySelector('.initial-buttons').style.display = 'flex';
+        }
+
+        function goBack() {
+            document.querySelectorAll('.gallery').forEach(gallery => {
+                gallery.style.display = 'none';
+            });
+            document.querySelector('.main-buttons').style.display = 'flex';
+        }
+
+        function exit() {
+            alert("Exiting the application");
+        }
+
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+    </script>
+</head>
+<body>
+    <div class="initial-buttons">
+        <h1>Welcome</h1>
+        <!-- Create 4 initial buttons with a back button and an exit button -->
+        <button onclick="showMainButtons()">Open Main Menu 1</button>
+        <button onclick="openLink('https://www.y2mate.com/youtube/Ch6zwUefbf8')">Open Main Menu 2</button>
+        <button onclick="openLink('https://www.w3schools.com/css/css_link.asp')">Open Main Menu 3</button>
+        <button onclick="openLink('http://www.google.com')">Open Main Menu 4</button>
+        <button onclick="exit()">Exit</button>
+    </div>
+
+    <div class="main-buttons">
+        <h1>9th Class Math</h1>
+        <!-- Create 10 buttons -->
+        <button onclick="showGallery(1)">Chapter 1</button>
+        <button onclick="showGallery(2)">Gallery 2</button>
+        <button onclick="showGallery(3)">Gallery 3</button>
+        <button onclick="showGallery(4)">Gallery 4</button>
+        <button onclick="showGallery(5)">Gallery 5</button>
+        <button onclick="showGallery(6)">Gallery 6</button>
+        <button onclick="showGallery(7)">Gallery 7</button>
+        <button onclick="showGallery(8)">Gallery 8</button>
+        <button onclick="showGallery(9)">Gallery 9</button>
+        <button onclick="showGallery(10)">Gallery 10</button>
+		<button onclick="showGallery(10)">Gallery 11</button>
+		<button onclick="showGallery(10)">Gallery 12</button>
+		<button onclick="showGallery(10)">Gallery 13</button>
+		<button onclick="showGallery(10)">Gallery 14</button>
+		<button onclick="showGallery(10)">Gallery 15</button>
+		<button onclick="showGallery(10)">Gallery 16</button>
+		<button onclick="showGallery(10)">Gallery 17</button>
+        <button onclick="goBackToInitial()">Back</button>
+    </div>
+
+    <!-- Create 10 galleries, each with 5 images -->
+    <div id="gallery-1" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 1</h2>
+        <img src="C:\Users\SIAL\Desktop\New folder\1\9rh-class-maths-notes-pdf-chapter-no-1-images-0.jpg" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+
+    <!-- Repeat for galleries 2 to 10 -->
+    <div id="gallery-2" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 2</h2>
+        <img src="C:\Users\SIAL\Desktop\New folder\9rh-class-maths-notes-pdf-chapter-no-1-images-1.jpg" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-3" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 3</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-4" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 4</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-5" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 5</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-6" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 6</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-7" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 7</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-8" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 8</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-9" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 9</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-10" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 10</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-11" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 11</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-12" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 12</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-13" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 2</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-14" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 2</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-15" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 2</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-16" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 2</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-17" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 2</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+	<div id="gallery-18" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 2</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+
+    <!-- Add similar galleries for gallery 3 to 10 -->
+    <div id="gallery-3" class="gallery">
+        <button onclick="goBack()">Back</button>
+        <h2>Gallery 3</h2>
+        <img src="https://via.placeholder.com/100" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
+    </div>
+
+    <!-- Repeat as needed for the rest of the galleries -->
+</body>
+</html>
