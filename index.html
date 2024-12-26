@@ -1,4 +1,3 @@
-final
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,18 @@ final
             flex-direction: column;
             align-items: center;
             text-align: center;
+			background-color:powderblue;
         }
+		.pak {
+			float: left;	
+			width: 100px;
+            height: 120px;	
+ margin: 0px 0;			
+		}
+		.headdd{
+			float: right;
+			 margin: 0px 0;
+		}
         .initial-buttons, .main-buttons, .gallery {
             display: none;
             flex-direction: column;
@@ -24,18 +34,21 @@ final
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+			border-radius: 100px;
         }
         .gallery img {
             width: 350px;
             height: 500px;
             margin: 10px 0;
+			 border: 2px solid green;
         }
         button {
             padding: 10px 20px;
+			display: block;
             margin: 10px;
-            font-size: 16px;
+            font-size: 20px;
             cursor: pointer;
-            border: none;
+            border: 5px solid green;
             border-radius: 5px;
             background: linear-gradient(145deg, #d9d9d9, #ffffff);
             box-shadow: 5px 5px 10px #b8b8b8, -5px -5px 10px #ffffff;
@@ -82,11 +95,12 @@ final
 </head>
 <body>
     <div class="initial-buttons">
-        <h1>Welcome</h1>
+	<img class="pak" src="1.jpg">
+        <h1 class="headdd">9TH Math Solution</h1>
         <!-- Create 4 initial buttons with a back button and an exit button -->
         <button onclick="showMainButtons()">Open Main Menu 1</button>
-        <button onclick="openLink('https://www.y2mate.com/youtube/Ch6zwUefbf8')">Open Main Menu 2</button>
-        <button onclick="openLink('https://www.w3schools.com/css/css_link.asp')">Open Main Menu 3</button>
+        <button onclick="openLink('https://www.youtube.com/@mrtechlytricks8875')">visit our channel</button>
+        <button onclick="openLink('https://muneersial1234.github.io/onlinesolution/')">All Classes Notes</button>
         <button onclick="openLink('http://www.google.com')">Open Main Menu 4</button>
         <button onclick="exit()">Exit</button>
     </div>
@@ -118,18 +132,11 @@ final
     <div id="gallery-1" class="gallery">
         <button onclick="goBack()">Back</button>
         <h2>Gallery 1</h2>
-            <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-0.jpg" alt="Image 1">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-5.jpg" alt="Image 5">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-6.jpg" alt="Image 6">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-7.jpg" alt="Image 7">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-8.jpg" alt="Image 8">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-9.jpg" alt="Image 9">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-10.jpg" alt="Image 10">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-11.jpg" alt="Image 11">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-12.jpg" alt="Image 12">
-	    <img src="https://muneersial1234.github.io/onlinesolution/1/9rh-class-maths-notes-pdf-chapter-no-1-images-13.jpg" alt="Image 13">
-	    
-    
+        <img src="C:\Users\SIAL\Desktop\New folder\1\9rh-class-maths-notes-pdf-chapter-no-1-images-0.jpg" alt="Image 1">
+        <img src="https://via.placeholder.com/100" alt="Image 2">
+        <img src="https://via.placeholder.com/100" alt="Image 3">
+        <img src="https://via.placeholder.com/100" alt="Image 4">
+        <img src="https://via.placeholder.com/100" alt="Image 5">
     </div>
 
     <!-- Repeat for galleries 2 to 10 -->
